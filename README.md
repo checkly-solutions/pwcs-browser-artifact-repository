@@ -13,13 +13,12 @@ Created mostly with Claude Code, reviewed by a human.
 
 ```mermaid
 graph LR
-    subgraph Docker Compose
-        agent["checkly-agent<br/>(checkly/agent)"]
-        repo["artifact-repo<br/>(nginx :80)"]
+    subgraph Docker
+        agent["checkly-agent"]
+        repo["artifact-repo<br>(nginx server with browser binaries)"]
         agent -- "PLAYWRIGHT_DOWNLOAD_HOST<br/>http://artifact-repo" --> repo
     end
-    repo -. "reads from" .-> data["./artifact-repo/data/<br/>(mirrored browsers)"]
-    cloud["Checkly Cloud"] -- "schedules checks" --> agent
+    cloud["Checkly Cloud"] -- "schedules PW check suite" --> agent
 ```
 
 ### Project structure
