@@ -1,4 +1,4 @@
-# Playwright Check Suite example: download browser binaries from a local artifact repository on a private location
+# Playwright Check Suite example: local artifact repository on a private location
 
 This is an example of how to configure a Playwright Check Suite to download browser binaries from a local [artifact repository](https://playwright.dev/docs/browsers#download-from-artifact-repository), running from the same local machine as your private location.
 
