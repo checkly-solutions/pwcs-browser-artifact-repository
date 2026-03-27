@@ -59,7 +59,7 @@ This CLI project has a Private Location defined, so all you need to do is run:
 npx checkly deploy
 ```
 
-Then, [go to the deployed Private Location](https://app.checklyhq.com/accounts/private-locations) ("Location - Artifact Repo Example), create an API key, and save it.
+Then, [go to the deployed Private Location](https://app.checklyhq.com/accounts/private-locations) ("Location - Artifact Repo Example"), create an API key, and save it.
 
 Add that API key to the .env file. You can copy the .env.example as a template:
 ```bash
@@ -85,12 +85,16 @@ curl http://localhost:8888/builds/  # should show directory listing
 
 ### Done
 
-That's it! You can now do a test run of your PW check suite in Checkly.
+That's it! You can now do a test run of your PW check suite in Checkly:
+
+```bash
+npx checkly record --test
+```
 
 If you watch the Docker logs while you run your check suite, you should see the browsers being downloaded.
 
 ```bash
-docker compose logs -f checkly-agent
+docker compose logs -f artifact-repo
 ```
 
 The artifact-repo logs should look like this:
