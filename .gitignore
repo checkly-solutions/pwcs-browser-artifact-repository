@@ -1,0 +1,10 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+
+# Mirrored browser binaries (large files, re-downloadable)
+artifact-repo/data/
+
+# Environment secrets
+.env
